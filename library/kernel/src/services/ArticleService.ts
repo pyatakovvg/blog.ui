@@ -3,13 +3,15 @@ import { IFilter } from '@repositories/classes/AbstractArticleRepository';
 import AbstractArticleService from '@services/classes/AbstractArticleService';
 
 import ArticleDto from '@models/ArticleDto';
-import ArticleRepository from '@repositories/ArticleRepository';
+import AbstractArticleRepository from '@repositories/classes/AbstractArticleRepository';
+
+import { Service, Inject } from 'typedi';
 
 
+@Service('ArticleService')
 class ArticleService extends AbstractArticleService {
-  constructor(private readonly articleRepository: ArticleRepository) {
-    super();
-  }
+  @Inject('ArticleRepository')
+  private readonly articleRepository!: AbstractArticleRepository
 
   async getAll(filter?: IFilter): Promise<ArticleDto[]> {
     return await this.articleRepository.getAll(filter);

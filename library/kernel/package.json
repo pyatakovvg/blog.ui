@@ -15,7 +15,8 @@
     "test": "jest"
   },
   "dependencies": {
-    "@helper/request": "0.0.1"
+    "@helper/request": "0.0.1",
+    "typedi": "0.10.0"
   },
   "devDependencies": {
     "@babel/cli": "7.21.0",

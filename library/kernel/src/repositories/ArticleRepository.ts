@@ -4,7 +4,10 @@ import Request from '@helper/request';
 import ArticleDto from '@models/ArticleDto';
 import AbstractArticleRepository, { IFilter } from '@repositories/classes/AbstractArticleRepository';
 
+import { Service } from 'typedi';
 
+
+@Service('ArticleRepository')
 class ArticleRepository extends AbstractArticleRepository {
   async getAll(filter?: IFilter): Promise<ArticleDto[]> {
     const request =  new Request();

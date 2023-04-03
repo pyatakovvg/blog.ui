@@ -2,13 +2,15 @@
 import AbstractUserService from '@services/classes/AbstractUserService';
 
 import UserDto from '@models/UserDto';
-import UserRepository from '@repositories/UserRepository';
+import AbstractUserRepository from '@repositories/classes/AbstractUserRepository';
+
+import { Service, Inject } from 'typedi';
 
 
+@Service('UserService')
 class UserService extends AbstractUserService {
-  constructor(private readonly userRepository: UserRepository) {
-    super();
-  }
+  @Inject('UserRepository')
+  private readonly userRepository!: AbstractUserRepository;
 
   async login(login: string, password: string): Promise<boolean> {
     const isAuth = await this.userRepository.login(login, password);

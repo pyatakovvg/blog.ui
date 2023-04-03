@@ -12,29 +12,31 @@ const CACHE_MANIFEST_NAME = `manifest`;
 
 export default function() {
 
-  registerRoute( ({ request }) => {
-    return request.destination === 'font';
-  }, new CacheFirst({
-    cacheName: CACHE_FONTS_NAME,
-    plugins: [
-      new ExpirationPlugin ({
-        maxEntries: 10,
-        maxAgeSeconds: 180 * 24 * 60 * 60, // 180 дней
-      }),
-    ],
-  }));
+  registerRoute(
+    ({ request }) => request.destination === 'font',
+    new CacheFirst({
+      cacheName: CACHE_FONTS_NAME,
+      plugins: [
+        new ExpirationPlugin ({
+          maxEntries: 10,
+          maxAgeSeconds: 180 * 24 * 60 * 60, // 180 дней
+        }),
+      ],
+    })
+  );
 
-  registerRoute( ({ request }) => {
-    return request.destination === 'image';
-  }, new NetworkFirst({
-    cacheName: CACHE_IMAGES_NAME,
-    plugins: [
-      new ExpirationPlugin ({
-        maxEntries: 50,
-        maxAgeSeconds: 7 * 24 * 60 * 60, // 7 дней
-      }),
-    ],
-  }));
+  registerRoute(
+    ({ request }) => request.destination === 'image',
+    new NetworkFirst({
+      cacheName: CACHE_IMAGES_NAME,
+      plugins: [
+        new ExpirationPlugin ({
+          maxEntries: 50,
+          maxAgeSeconds: 7 * 24 * 60 * 60, // 7 дней
+        }),
+      ],
+    })
+  );
 
   registerRoute(
     ({ url }) => url.pathname.match(/(manifest.json)/),

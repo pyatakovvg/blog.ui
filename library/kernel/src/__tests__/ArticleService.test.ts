@@ -39,7 +39,7 @@ class ArticleRepository extends AbstractArticleRepository {
 
 describe('Инициализация', () => {
 
-  const model = new ArticleService(new ArticleRepository());
+  const model = new ArticleService();
 
 
   test('Функция getAll() не должна быть undefined', async () => {

@@ -1,9 +1,10 @@
 
 import { Controller, IContext } from '@library/app';
-import { ArticleService, ArticleRepository, ArticleDto } from '@library/kernel';
+import { ArticleDto, AbstractArticleService } from '@library/kernel';
 
 import ErrorState from "@controllers/ErrorState";
 
+import { Container } from 'typedi';
 import { observable, action, makeObservable } from 'mobx';
 
 
@@ -12,7 +13,7 @@ class PageController extends Controller {
   @observable public articles: ArticleDto[] = [];
   @observable public error: ErrorState = new ErrorState();
 
-  private readonly articleService: ArticleService = new ArticleService(new ArticleRepository());
+  private readonly articleService: AbstractArticleService = Container.get('ArticleService');
 
   @action.bound
   processState(state: boolean) {

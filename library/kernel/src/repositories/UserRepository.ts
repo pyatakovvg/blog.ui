@@ -2,7 +2,10 @@
 import UserDto from '@models/UserDto';
 import AbstractUserRepository from '@repositories/classes/AbstractUserRepository';
 
+import { Service } from 'typedi';
 
+
+@Service('UserRepository')
 class UserRepository extends AbstractUserRepository {
   async login(login: string, password: string): Promise<boolean> {
     if (login !== 'test@mail.ru') {
