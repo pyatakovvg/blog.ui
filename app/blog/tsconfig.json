@@ -1,0 +1,4 @@
+{
+  "extends": "../../tsconfig.json",
+  "include": ["./src", "./react-app-env.d.ts"]
+}

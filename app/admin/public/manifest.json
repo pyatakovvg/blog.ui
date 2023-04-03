@@ -1,0 +1,28 @@
+{
+  "short_name": "SL",
+  "name": "SELLGAR",
+  "id": "/",
+  "start_url": ".",
+  "display": "fullscreen",
+  "orientation": "portrait",
+  "offline_enabled": true,
+  "theme_color": "#FFFFFF",
+  "background_color": "#FFFFFF",
+  "icons": [
+    { "sizes": "48x48", "src": "/favicon/48x48.svg", "type": "image/svg+xml" },
+    { "sizes": "57x57", "src": "/favicon/57x57.svg", "type": "image/svg+xml" },
+    { "sizes": "60x60", "src": "/favicon/60x60.svg", "type": "image/svg+xml" },
+    { "sizes": "72x72", "src": "/favicon/72x72.svg", "type": "image/svg+xml" },
+    { "sizes": "76x76", "src": "/favicon/76x76.svg", "type": "image/svg+xml" },
+    { "sizes": "96x96", "src": "/favicon/96x96.svg", "type": "image/svg+xml" },
+    { "sizes": "114x114", "src": "/favicon/114x114.svg", "type": "image/svg+xml" },
+    { "sizes": "120x120", "src": "/favicon/120x120.svg", "type": "image/svg+xml" },
+    { "sizes": "144x144", "src": "/favicon/144x144.svg", "type": "image/svg+xml" },
+    { "sizes": "152x152", "src": "/favicon/152x152.svg", "type": "image/svg+xml" },
+    { "sizes": "180x180", "src": "/favicon/180x180.svg", "type": "image/svg+xml" },
+    { "sizes": "192x192", "src": "/favicon/192x192.svg", "type": "image/svg+xml" },
+    { "sizes": "256x256", "src": "/favicon/256x256.svg", "type": "image/svg+xml" },
+    { "sizes": "384x384", "src": "/favicon/384x384.svg", "type": "image/svg+xml" },
+    { "sizes": "512x512", "src": "/favicon/512x512.svg", "type": "image/svg+xml" }
+  ]
+}

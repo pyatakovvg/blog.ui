@@ -1,0 +1,48 @@
+{
+  "private": true,
+  "name": "@app/admin",
+  "version": "0.0.1",
+  "homepage": "/",
+  "scripts": {
+    "start": "react-app-rewired start",
+    "build": "react-app-rewired build"
+  },
+  "dependencies": {
+    "@plugin/logger": "0.0.1",
+    "@library/app": "0.0.1",
+    "@library/design": "0.0.1",
+    "@module/article": "0.0.1",
+    "@module/main": "0.0.1",
+    "@module/sign-in": "0.0.1",
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
+    "react-router-dom": "6.9.0",
+    "sass": "1.59.2",
+    "styled-components": "5.3.8"
+  },
+  "devDependencies": {
+    "@types/react-dom": "18.0.11",
+    "react-app-rewired": "2.2.1",
+    "react-devtools": "4.27.2",
+    "react-scripts": "5.0.1",
+    "workbox-webpack-plugin": "6.5.4"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
+}

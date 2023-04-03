@@ -1,0 +1,16 @@
+{
+  "presets": [
+    "babel-preset-mobx",
+    "@babel/preset-react",
+    "@babel/preset-typescript"
+  ],
+  "plugins": [
+    ["module-resolver", {
+      "alias": {
+        "@typing": "./src/@typing",
+        "@components": "./src/App/components",
+        "@controllers": "./src/App/controllers"
+      }
+    }]
+  ]
+}

@@ -1,0 +1,34 @@
+{
+  "private": true,
+  "name": "@widget/profile",
+  "version": "0.0.1",
+  "description": "users",
+  "author": "Viktor Pyatakov <pyatakov.viktor@gmail.com>",
+  "homepage": "",
+  "license": "ISC",
+  "main": "lib/index.js",
+  "module": "lib/index.js",
+  "types": "types",
+  "scripts": {
+    "types": "tsc",
+    "build": "cross-env NODE_ENV=production babel ./src --out-dir ./lib --extensions '.ts,.tsx' --copy-files --no-copy-ignored && npm run types",
+    "start": "cross-env NODE_ENV=development babel ./src --out-dir ./lib --extensions '.ts,.tsx' --copy-files --watch"
+  },
+  "dependencies": {
+    "@library/kernel": "0.0.1",
+    "@library/kit": "0.0.1",
+    "hammerjs": "2.0.8",
+    "react": "18.2.0",
+    "react-router-dom": "6.9.0",
+    "styled-components": "5.3.8"
+  },
+  "devDependencies": {
+    "@babel/cli": "7.21.0",
+    "@babel/core": "7.21.0",
+    "@babel/preset-react": "7.18.6",
+    "@babel/preset-typescript": "7.21.0",
+    "@types/hammerjs": "2.0.41",
+    "babel-plugin-module-resolver": "5.0.0",
+    "cross-env": "7.0.3"
+  }
+}

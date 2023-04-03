@@ -1,0 +1,25 @@
+{
+  "private": true,
+  "name": "@library/workbox",
+  "version": "0.0.1",
+  "description": "users",
+  "author": "Viktor Pyatakov <pyatakov.viktor@gmail.com>",
+  "homepage": "",
+  "license": "ISC",
+  "main": "lib/index.js",
+  "module": "lib/index.js",
+  "types": "types",
+  "scripts": {
+    "types": "tsc",
+    "build": "cross-env NODE_ENV=production babel ./src --out-dir ./lib --extensions '.ts,.tsx' --copy-files --no-copy-ignored && npm run types",
+    "start": "cross-env NODE_ENV=development babel ./src --out-dir ./lib --extensions '.ts,.tsx' --copy-files --watch"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "@babel/cli": "7.21.0",
+    "@babel/core": "7.21.0",
+    "@babel/preset-typescript": "7.21.0",
+    "babel-plugin-module-resolver": "5.0.0",
+    "cross-env": "7.0.3"
+  }
+}

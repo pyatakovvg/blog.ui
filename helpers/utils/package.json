@@ -1,0 +1,21 @@
+{
+  "private": true,
+  "name": "@helper/utils",
+  "version": "0.0.1",
+  "description": "Utils",
+  "author": "Viktor Pyatakov <pyatakov.viktor@gmail.com>",
+  "homepage": "",
+  "license": "ISC",
+  "main": "lib/index.js",
+  "types": "types",
+  "scripts": {
+    "types": "tsc",
+    "build": "cross-env NODE_ENV=production babel ./src --out-dir ./lib --extensions '.ts,.tsx' --copy-files --no-copy-ignored && npm run types",
+    "start": "cross-env NODE_ENV=development babel ./src --out-dir ./lib --extensions '.ts,.tsx' --copy-files --watch"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "@types/node": "18.11.18",
+    "cross-env": "7.0.3"
+  }
+}
