@@ -1,16 +1,12 @@
 
-export { default as UserDto } from './models/UserDto';
-export { default as AuthorDto } from './models/AuthorDto';
-export { default as ArticleDto } from './models/ArticleDto';
+import 'reflect-metadata';
 
-export { default as UserRepository } from './repositories/UserRepository';
-export { default as ArticleRepository } from './repositories/ArticleRepository';
+export { default as UserDto } from './models/classes/UserDto';
+export { default as AuthorDto } from './models/classes/AuthorDto';
+export { default as ArticleDto } from './models/classes/ArticleDto';
 
-export { default as AbstractUserRepository } from './repositories/classes/AbstractUserRepository';
-export { default as AbstractArticleRepository } from './repositories/classes/AbstractArticleRepository';
+export { default as UserRepository } from './repositories/classes/UserRepository';
+export { default as ArticleRepository } from './repositories/classes/ArticleRepository';
 
-export { default as UserService } from './services/UserService';
-export { default as ArticleService } from './services/ArticleService';
-
-export { default as AbstractUserService } from './services/classes/AbstractUserService';
-export { default as AbstractArticleService } from './services/classes/AbstractArticleService';
+export { default as UserService } from './services/classes/UserService';
+export { default as ArticleService } from './services/classes/ArticleService';

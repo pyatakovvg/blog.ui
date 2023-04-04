@@ -369,7 +369,7 @@
     "@babel/helper-plugin-utils" "^7.20.2"
     "@babel/plugin-syntax-class-static-block" "^7.14.5"
 
-"@babel/plugin-proposal-decorators@^7.0.0", "@babel/plugin-proposal-decorators@^7.16.4":
+"@babel/plugin-proposal-decorators@7.21.0", "@babel/plugin-proposal-decorators@^7.0.0", "@babel/plugin-proposal-decorators@^7.16.4":
   version "7.21.0"
   resolved "https://registry.yarnpkg.com/@babel/plugin-proposal-decorators/-/plugin-proposal-decorators-7.21.0.tgz#70e0c89fdcd7465c97593edb8f628ba6e4199d63"
   integrity sha512-MfgX49uRrFUTL/HvWtmx3zmpyzMMr4MTj3d527MLlr/4RTT9G/ytFFP7qet2uM2Ve03b+BkpWUpK+lRXnQ+v9w==
@@ -4271,6 +4271,11 @@ babel-plugin-named-asset-import@^0.3.8:
   resolved "https://registry.yarnpkg.com/babel-plugin-named-asset-import/-/babel-plugin-named-asset-import-0.3.8.tgz#6b7fa43c59229685368683c28bc9734f24524cc2"
   integrity sha512-WXiAc++qo7XcJ1ZnTYGtLxmBCVbddAml3CEXgWaBzNzLNoxtQ8AiGEFDMOhot9XjTCQbvP5E77Fj9Gk924f00Q==
 
+babel-plugin-parameter-decorator@1.0.16:
+  version "1.0.16"
+  resolved "https://registry.yarnpkg.com/babel-plugin-parameter-decorator/-/babel-plugin-parameter-decorator-1.0.16.tgz#1c889c3a1f3bbf03801fcbc2e95b8bae7468df3f"
+  integrity sha512-yUT2WPTUg1JaPmRGRSF557m1HJ9vdFQInRWOkiOyO5a9HhqlXffJu+fQ2xd5+qU/35ICMrrk9eWKsHCairKA9w==
+
 babel-plugin-polyfill-corejs2@^0.3.3:
   version "0.3.3"
   resolved "https://registry.yarnpkg.com/babel-plugin-polyfill-corejs2/-/babel-plugin-polyfill-corejs2-0.3.3.tgz#5d1bd3836d0a19e1b84bbf2d9640ccb6f951c122"
@@ -4315,6 +4320,13 @@ babel-plugin-transform-react-remove-prop-types@^0.4.24:
   version "0.4.24"
   resolved "https://registry.yarnpkg.com/babel-plugin-transform-react-remove-prop-types/-/babel-plugin-transform-react-remove-prop-types-0.4.24.tgz#f2edaf9b4c6a5fbe5c1d678bfb531078c1555f3a"
   integrity sha512-eqj0hVcJUR57/Ug2zE1Yswsw4LhuqqHhD+8v120T1cl3kjg76QwtyBrdIk4WVwK+lAhBJVYCd/v+4nc4y+8JsA==
+
+babel-plugin-transform-typescript-metadata@0.3.2:
+  version "0.3.2"
+  resolved "https://registry.yarnpkg.com/babel-plugin-transform-typescript-metadata/-/babel-plugin-transform-typescript-metadata-0.3.2.tgz#7a327842d8c36ffe07ee1b5276434e56c297c9b7"
+  integrity sha512-mWEvCQTgXQf48yDqgN7CH50waTyYBeP2Lpqx4nNWab9sxEpdXVeKgfj1qYI2/TgUPQtNFZ85i3PemRtnXVYYJg==
+  dependencies:
+    "@babel/helper-plugin-utils" "^7.0.0"
 
 babel-preset-current-node-syntax@^1.0.0:
   version "1.0.1"
@@ -5493,6 +5505,13 @@ csstype@^3.0.2:
   version "3.1.1"
   resolved "https://registry.yarnpkg.com/csstype/-/csstype-3.1.1.tgz#841b532c45c758ee546a11d5bd7b7b473c8c30b9"
   integrity sha512-DJR/VvkAvSZW9bTouZue2sSxDwdTN92uHjqeKVm+0dAqdfNykRzQ95tay8aXMBAAPpUiq4Qcug2L7neoRh2Egw==
+
+customize-cra@1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/customize-cra/-/customize-cra-1.0.0.tgz#73286563631aa08127ad4d30a2e3c89cf4e93c8d"
+  integrity sha512-DbtaLuy59224U+xCiukkxSq8clq++MOtJ1Et7LED1fLszWe88EoblEYFBJ895sB1mC6B4uu3xPT/IjClELhMbA==
+  dependencies:
+    lodash.flow "^3.5.0"
 
 damerau-levenshtein@^1.0.8:
   version "1.0.8"
@@ -6736,6 +6755,11 @@ find-up@^5.0.0:
   dependencies:
     locate-path "^6.0.0"
     path-exists "^4.0.0"
+
+first-di@1.0.11:
+  version "1.0.11"
+  resolved "https://registry.yarnpkg.com/first-di/-/first-di-1.0.11.tgz#c7d58db1895d21954600af0e14743e9151b50de7"
+  integrity sha512-GO3R6m+lro6M74PYbwcIQ1CzUZW3gNLPYPlxqmFri2H/dVAiRcNyUDJKMPs6LplBttWp3b+odmuSZHMyW7hM0A==
 
 flat-cache@^3.0.4:
   version "3.0.4"
@@ -9382,6 +9406,11 @@ lodash.debounce@^4.0.8:
   version "4.0.8"
   resolved "https://registry.yarnpkg.com/lodash.debounce/-/lodash.debounce-4.0.8.tgz#82d79bff30a67c4005ffd5e2515300ad9ca4d7af"
   integrity sha512-FT1yDzDYEoYWhnSGnpE/4Kj1fLZkDFyqRb7fNt6FdYOSxlUWAtp42Eh6Wb0rGIv/m9Bgo7x4GhQbm5Ys4SG5ow==
+
+lodash.flow@^3.5.0:
+  version "3.5.0"
+  resolved "https://registry.yarnpkg.com/lodash.flow/-/lodash.flow-3.5.0.tgz#87bf40292b8cf83e4e8ce1a3ae4209e20071675a"
+  integrity sha512-ff3BX/tSioo+XojX4MOsOMhJw0nZoUEF011LX8g8d3gvjVbxd89cCio4BCXronjxcTUIJUoqKEUA+n4CqvvRPw==
 
 lodash.ismatch@^4.4.0:
   version "4.4.0"

@@ -2,13 +2,14 @@
 import 'reflect-metadata';
 import { describe, test, expect } from '@jest/globals';
 
-import ArticleDto from '@models/ArticleDto';
-import ArticleService from '@services//ArticleService';
-import AbstractArticleRepository, { IArticleFilter } from '@services/classes/AbstractArticleService';
+import ArticleDto from '@models/classes/ArticleDto';
+import ArticleService from '@services/classes/ArticleService';
+
+import { IArticleRepository } from '@repositories/types';
 
 
-class ArticleRepository extends AbstractArticleRepository {
-  async getAll(filter?: IArticleFilter): Promise<ArticleDto[]> {
+class ArticleRepository implements IArticleRepository {
+  async getAll<T extends object>(filter?: T): Promise<ArticleDto[]> {
     return Promise.resolve([{
       uuid: '111',
       title: 'Описание 1',
@@ -40,7 +41,6 @@ class ArticleRepository extends AbstractArticleRepository {
 describe('Инициализация', () => {
 
   const model = new ArticleService();
-
 
   test('Функция getAll() не должна быть undefined', async () => {
 

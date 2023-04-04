@@ -1,12 +1,12 @@
 
-import UserDto from '@models/UserDto';
-import AbstractUserRepository from '@repositories/classes/AbstractUserRepository';
+import { IUserDto } from '@models/types';
+import { IUserRepository } from '@repositories/types';
 
-import { Service } from 'typedi';
+import { reflection } from 'first-di';
 
 
-@Service('UserRepository')
-class UserRepository extends AbstractUserRepository {
+@reflection
+class UserRepository extends IUserRepository {
   async login(login: string, password: string): Promise<boolean> {
     if (login !== 'test@mail.ru') {
       return false;
@@ -21,7 +21,7 @@ class UserRepository extends AbstractUserRepository {
     return true;
   }
 
-  async get(): Promise<UserDto> {
+  async get(): Promise<IUserDto> {
     return Promise.reject();
     // return new Promise((resolve) => {
     //   setTimeout(() => resolve(new UserDto().fromJSON({

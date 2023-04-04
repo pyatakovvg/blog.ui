@@ -1,7 +1,8 @@
 
 import { Serializable, jsonProperty } from 'ts-serializable';
 
-import AuthorDto from '@models/AuthorDto';
+import { IAuthorDto } from '@models/types';
+import AuthorDto from '@models/classes/AuthorDto';
 
 
 class ArticleDto extends Serializable {
@@ -15,7 +16,7 @@ class ArticleDto extends Serializable {
   public content: string = '';
 
   @jsonProperty(AuthorDto)
-  public author!: AuthorDto;
+  public author!: IAuthorDto;
 
   @jsonProperty(String)
   public createdAt: string = '';

@@ -1,6 +1,6 @@
 
 import { Controller, IContext } from '@library/app';
-import { ArticleDto, AbstractArticleService } from '@library/kernel';
+import { ArticleDto, ArticleService } from '@library/kernel';
 
 import ErrorState from "@controllers/ErrorState";
 
@@ -13,7 +13,7 @@ class PageController extends Controller {
   @observable public articles: ArticleDto[] = [];
   @observable public error: ErrorState = new ErrorState();
 
-  private readonly articleService: AbstractArticleService = Container.get('ArticleService');
+  private readonly articleService = new ArticleService();
 
   @action.bound
   processState(state: boolean) {
